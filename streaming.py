@@ -5,9 +5,10 @@ load_dotenv()
 
 model = ChatOpenAI(model="gpt-4o-mini")
 
-for chunk in model.stream("Write me a 200 words paragraph on Artificial Intelligence"):
+# for chunk in model.stream("Write me a 200 words paragraph on Artificial Intelligence"):
+for chunk in model.stream("Why do parrots have colorful feathers"):
   # print(chunk.text, end="|", flush=True)
-  print(chunk.content, end="", flush=True)
+  print(chunk.text, end="", flush=True)
 
 
 # from langchain.agents import create_agent
